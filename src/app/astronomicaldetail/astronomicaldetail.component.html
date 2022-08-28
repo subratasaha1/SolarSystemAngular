@@ -1,0 +1,75 @@
+<div class="container my-5">
+    <div>
+                <p class="font-weight-normal" *ngIf="SolarBody.name">Name of the star (in French): <strong>{{SolarBody.name}}</strong></p>
+                <p class="text-justify"  *ngIf="SolarBody.englishName">English name of the star: <strong>{{SolarBody.englishName}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.isPlanet">Is it a planet? <strong>{{SolarBody.isPlanet}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.semimajorAxis" >The semi-major axis in kilometers <strong>{{SolarBody.semimajorAxis}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.perihelion">The perihelion in kilometers <strong>{{SolarBody.perihelion}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.aphelion" >The aphelion in kilometers <strong>{{SolarBody.aphelion}}</strong></p>
+            
+            
+                <p for="text-justify" *ngIf="SolarBody.eccentricity" >Orbital eccentricity: <strong>{{SolarBody.eccentricity}}</strong></p>
+                <p for="text-justify" *ngIf="SolarBody.inclination">The orbital inclination in degrees: <strong>{{SolarBody.inclination}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.density">The star's density in g.cm 3 <strong>{{SolarBody.density}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.gravity">The surface gravity in ms -2  <strong>{{SolarBody.gravity}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.escape">The escape velocity in ms -1 <strong>{{SolarBody.escape}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.meanRadius">The average radius in kilometers <strong>{{SolarBody.meanRadius}}</strong></p>
+            
+                <div *ngIf="SolarBody.aroundPlanet">
+                    <small>For a satellite, the planet around which the celestial body orbits</small>
+                    <p for="text-justify" *ngIf="SolarBody.aroundPlanet.planet" >Name of the planet: <strong>{{SolarBody.aroundPlanet.planet}}</strong></p>
+                    <p for="text-justify" *ngIf="SolarBody.aroundPlanet.rel">API address for the planet: <strong>{{SolarBody.aroundPlanet.rel}}</strong></p>
+                </div>
+                <div *ngIf="SolarBody.vol">
+                    <small>The Volume of the object</small>
+                    <p for="text-justify" *ngIf="SolarBody.vol.volValue" > volume of the star: <strong>{{SolarBody.vol.volValue}}</strong></p>
+                    <p for="text-justify" *ngIf="SolarBody.vol.volExponent">exponent 10 of the volume: <strong>{{SolarBody.vol.volExponent}}</strong></p>
+                </div>
+                <div *ngIf="SolarBody.mass">
+                    <small>The mass of the object </small>
+                    <p for="text-justify" *ngIf="SolarBody.mass.massValue" > mass of the star : <strong>{{SolarBody.mass.massValue}}</strong></p>
+                    <p for="text-justify" *ngIf="SolarBody.mass.massExponent">massExponent: <strong>{{SolarBody.mass.massExponent}}</strong></p>
+                </div>
+                <div *ngIf="SolarBody.moons">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>satellite name</th>
+                                <th>API address for the satellite</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let moon of SolarBody.moons">
+                                <th scope="row">{{moon.moon}}</th>
+                                <td>{{moon.rel}}</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <p for="text-justify" *ngIf="SolarBody.equaRadius" >The equatorial radius in kilometers: <strong>{{SolarBody.equaRadius}}</strong></p>
+                <p for="text-justify" *ngIf="SolarBody.polarRadius" >The polar radius in kilometers: <strong>{{SolarBody.polarRadius}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.escape" >Flattening <strong>{{SolarBody.escape}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.dimension">Dimension of the star in kilometers on 3 axes X, Y and Z for non-spherical stars  <strong>{{SolarBody.dimension}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.sideralOrbit" >The period of the star's revolution around another star (the Sun or a planet) in terrestrial days <strong>{{SolarBody.sideralOrbit}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.sideralRotation">The rotation period of the star, the time required for the star to complete a revolution on itself, in hours <strong>{{SolarBody.sideralRotation}}</strong></p>
+            
+                
+                <p for="text-justify" *ngIf="SolarBody.discoveredBy">Name of the discoverer of the star: <strong>{{SolarBody.discoveredBy}}</strong></p>
+                <p for="text-justify"*ngIf="SolarBody.discoveryDate" >Date of discovery of the star: <strong>{{SolarBody.discoveryDate}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.alternativeName">Temporary designation <strong>{{SolarBody.alternativeName}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.alternativeName">Inclination on the axis  <strong>{{SolarBody.axialTilt}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.alternativeName">Mean temperature in K <strong>{{SolarBody.avgTemp}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.mainAnomaly">Average anomaly in degree <strong>{{SolarBody.mainAnomaly}}</strong></p>
+            
+            
+                <p for="text-justify" *ngIf="SolarBody.argPeriapsis">Perihelion argument in degree: <strong>{{SolarBody.argPeriapsis}}</strong></p>
+                <p for="text-justify" *ngIf="SolarBody.longAscNode">Ascending node in degree: <strong>{{SolarBody.longAscNode}}</strong></p>
+                <p class="text-justify" *ngIf="SolarBody.bodyType">Type of body(Star, Planet, Dwarf Planet, Asteroid, Comet or Moon) <strong>{{SolarBody.bodyType}}</strong></p>
+            
+    </div>
+    
+    
+
+</div>
+  

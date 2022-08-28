@@ -1,0 +1,94 @@
+<div class="container my-5">
+    <div class="row">
+      <div class="col">
+        <h1 class="mb-4">Solar Bodies</h1>
+  
+        <!-- pagination UI goes here -->
+      </div>
+    </div>
+  </div>
+  <!--<div class="input-group mb-3">
+
+    <input type="text" class="form-control" placeholder="Search..." (keyup)="search($event)">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Size: {{options.size}}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><button class="dropdown-item" type="button" (click)="size(5)">5</button></li>
+      <li><button class="dropdown-item" type="button" (click)="size(10)">10</button></li>
+      <li><button class="dropdown-item" type="button" (click)="size(20)">20</button></li>
+      <li><button class="dropdown-item" type="button" (click)="size(50)">50</button></li>
+      <li><button class="dropdown-item" type="button" (click)="size(100)">100</button></li>
+    </ul>
+  </div>-->
+
+<!-- table -->
+<!--<div class="card mb-3">
+    <div class="card-body">
+      <table class="table" style="table-layout: fixed;">
+          <thead>
+            <tr>
+            <th (click)="order('id')" role="button" style="width: 10%;">
+              # <span *ngIf="by('id')">{{ direction }}</span>
+            </th>
+            <th (click)="order('name')" role="button">
+              Name <span *ngIf="by('name')">{{ direction }}</span>
+            </th>
+            <th (click)="order('englishName')" role="button">
+            English Name <span *ngIf="by('englishName')">{{ direction }}</span>
+            </th>
+            <th (click)="order('discoveredBy')" role="button" style="width: 15%;">
+              Discovered By <span *ngIf="by('discoveredBy')">{{ direction }}</span>
+            </th>
+            <th (click)="order('alternativeName')" role="button">
+            Alternative Name <span *ngIf="by('alternativeName')">{{ direction }}</span>
+            </th>
+            </tr>
+          </thead>
+      </table>
+    </div>
+  </div>-->
+  <!-- table -->
+<div class="card mb-3">
+    <div class="card-body">
+      <table class="table" style="table-layout: fixed;">
+        <thead>
+          <tr>
+              <th scope="col">#Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">englishName</th>
+              <th scope="col">discoveredBy</th>
+              <th scope="col">alternativeName</th>
+          </tr>
+      </thead>
+          <tbody>
+            <tr *ngFor="let solarBody of SolarBodies.Bodies">
+              <td>{{solarBody.id}}</td>
+              <td>{{solarBody.name}}</td>
+              <td>{{solarBody.englishName}}</td>
+              <td>{{solarBody.discoveredBy}}</td>
+              <td>{{solarBody.alternativeName}}</td>
+            </tr>
+            <!--<tr *ngIf="!Response.Bodies.length">
+              <td colspan="5" class="text-center p-5">No records found</td>
+            </tr>-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- paginator -->
+<!--<nav *ngIf="numbers.length > 1">
+    <ul class="pagination justify-content-center">
+      <li id="prev" class="page-item" [ngClass]="{ 'disabled': options.page === 1 }">
+        <a class="page-link" href="#" (click)="prev()">Previous</a>
+      </li>
+      <ng-container *ngIf="Response">
+        <li class="page-item" *ngFor="let number of numbers" [ngClass]="{ 'active': options.page === number }">
+          <a class="page-link" href="#" (click)="to(number)">{{number}}</a>
+        </li>
+      </ng-container>
+      <li id="next" class="page-item" [ngClass]="{ 'disabled': options.page === numbers.length }">
+        <a class="page-link" href="#" (click)="next()" disabled="true">Next</a>
+      </li>
+    </ul>
+  </nav>-->

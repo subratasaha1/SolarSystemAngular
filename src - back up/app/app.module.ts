@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AstronomicalsummaryComponent } from './astronomicalsummary/astronomicalsummary.component';
 import { DataService } from './data.service';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { AstronomicaldetailComponent } from './astronomicaldetail/astronomicaldetail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AstronomicalsummaryComponent,
-    AstronomicaldetailComponent
+    AstronomicalsummaryComponent
   ],
   imports: [
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    MatToolbarModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
