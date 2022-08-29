@@ -1,5 +1,8 @@
 <div class="container my-5">
     <div>
+        <button class="btn btn-success pull-right" ><a routerLink="/home"> Home</a></button>
+    </div>
+    <div>
                 <p class="font-weight-normal" *ngIf="SolarBody.name">Name of the star (in French): <strong>{{SolarBody.name}}</strong></p>
                 <p class="text-justify"  *ngIf="SolarBody.englishName">English name of the star: <strong>{{SolarBody.englishName}}</strong></p>
                 <p class="text-justify" *ngIf="SolarBody.isPlanet">Is it a planet? <strong>{{SolarBody.isPlanet}}</strong></p>
@@ -68,8 +71,5 @@
                 <p class="text-justify" *ngIf="SolarBody.bodyType">Type of body(Star, Planet, Dwarf Planet, Asteroid, Comet or Moon) <strong>{{SolarBody.bodyType}}</strong></p>
             
     </div>
-    
-    
-
 </div>
   
