@@ -8,34 +8,27 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>English Name</th>
-                            <th>Discovered By</th>
-                            <th>Alternative Name</th>
+                                <th>Name of the star</th>
+                                <th>English name of the star</th>
+                                <th>Name of the discoverer of the star</th>
+                                <th>Date of discovery of the star</th>
+                                <th>Is it a planet</th>
+                                <th>Details</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let solarBody of SolarBodies.bodies| paginate: { itemsPerPage: 10, currentPage: p, totalItems: total }">
-                                
-                            <!--<tr *ngFor="let solarBody of SolarBodies.bodies">-->
-                                <th scope="row">{{solarBody.id}}</th>
-                                <td>{{solarBody.name}}</td>
+                            <tr *ngFor="let solarBody of SolarBodies.bodies| paginate: { itemsPerPage: 10, currentPage: p, totalItems: total }">                                
+                                <th scope="row">{{solarBody.name}}</th>
                                 <td>{{solarBody.englishName}}</td>
                                 <td>{{solarBody.discoveredBy}}</td>
-                                <td>{{solarBody.alternativeName}}</td>
+                                <td>{{solarBody.discoveryDate}}</td>
+                                <td>{{solarBody.isPlanet}}</td>
                                 <td>
-                                    <span class="edit" routerLink="/astronomical-detail/{{ solarBody.id }}"
-                                      >Details</span>
+                                    <!--<span class="edit" routerLink="/astronomical-detail/{{ solarBody.id }}">{{ solarBody.id }}</span>-->
+                                    <a routerLink="/astronomical-detail/{{ solarBody.id }}">{{ solarBody.id }}</a>
                                 </td>
-                                <!--<td>
-                                    <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-issue/', issues.id]">Edit</button>
-                                </td>-->
                             </tr>
-                            <!--<tr *ngIf="!SolarBodies.bodies.length">
-                                <td colspan="5" class="text-center p-5">No records found</td>
-                            </tr>-->
-                        </tbody>
+                         </tbody>
                     </table>
                 </div>
             </div>

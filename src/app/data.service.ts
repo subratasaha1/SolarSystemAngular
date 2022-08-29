@@ -20,21 +20,19 @@ export class DataService {
   };
 
 
+  //This method returns all the solar stars
   GetAllSolarBodies(p: Number): Observable<SolarBodies>
   {
-    
-    //const url = `${this.REST_API_SERVER}?order=${options.orderBy},${options.orderDir}&page=${options.page},${options.size}`;
-    const url = `${this.REST_API_SERVER}?page=${p},${10}`;
-    
+    const url = `${this.REST_API_SERVER}?page=${p},${10}?data=name,englishName,discoveredBy,discoveryDate,isPlanet,id`;  
     return this.httpClient.
     get<SolarBodies>(url)
     .pipe(retry(1),catchError(this.handleError));
   }
 
+  //this method returns specific solar stars
   GetSolarBodyDetailById(id: any): Observable<SolarBodies>
   {
     
-    //const url = `${this.REST_API_SERVER}/{options.page}`;
     const url = `${this.REST_API_SERVER}/${id}`;
     
     return this.httpClient.

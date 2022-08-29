@@ -31,9 +31,4 @@ describe('AstronomicalsummaryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  /*it(`should have a title 'AstronomicalsummaryComponent to display list of solar bodies'`, waitForAsync(() => {
-    fixture = TestBed.createComponent(AstronomicalsummaryComponent);
-    component = fixture.debugElement.componentInstance;
-    expect(component.title).toEqual('AstronomicalsummaryComponent to display list of solar bodies');
-  }));*/
 });

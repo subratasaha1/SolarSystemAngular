@@ -25,9 +25,7 @@ export class AstronomicalsummaryComponent implements OnInit {
       this.SolarBodies = data;
     })
   }
-  
-  
-  pageChangeEvent(event: number){
+ pageChangeEvent(event: number){
     this.p = event;
     this.loadSolarBodies();
   }
