@@ -2,42 +2,10 @@
     <div class="row">
         <div class="col">
             <h1 class="mb-4">Solar Bodies</h1>
-            <!-- controls -->
-            <div class="input-group mb-1">
-                
-                <!--Size-->
-
-                <!--Page Size:
-                <select (change)="size($event)">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="100">100</option>
-                </select>-->
-            </div>
             <!-- table -->
             <div class="card mb-3" *ngIf="SolarBodies">
                 <div class="card-body">
                     <table class="table table-hover">
-                        <!--<thead>
-                            <tr>
-                            <th (click)="order('id')" role="button" style="width: 10%;">
-                            # <span *ngIf="by('id')">{{ direction }}</span>
-                            </th>
-                            <th (click)="order('name')" role="button">
-                            Name <span *ngIf="by('name')">{{ direction }}</span>
-                            </th>
-                            <th (click)="order('englishName')" role="button">
-                            English Name <span *ngIf="by('englishName')">{{ direction }}</span>
-                            </th>
-                            <th (click)="order('discoveredBy')" role="button" style="width: 15%;">
-                            Discovered By <span *ngIf="by('discoveredBy')">{{ direction }}</span>
-                            </th>
-                            <th (click)="order('alternativeName')" role="button">
-                            Alternative Name <span *ngIf="by('alternativeName')">{{ direction }}</span>
-                            </th>
-                            </tr>
-                        </thead>-->
                         <thead>
                             <tr>
                             <th>Id</th>
@@ -64,9 +32,9 @@
                                     <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit-issue/', issues.id]">Edit</button>
                                 </td>-->
                             </tr>
-                            <tr *ngIf="!SolarBodies.bodies.length">
+                            <!--<tr *ngIf="!SolarBodies.bodies.length">
                                 <td colspan="5" class="text-center p-5">No records found</td>
-                            </tr>
+                            </tr>-->
                         </tbody>
                     </table>
                 </div>
